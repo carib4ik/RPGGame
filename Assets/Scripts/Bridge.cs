@@ -19,7 +19,7 @@ public class Bridge : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<MovementController>() != null)
+        if (other.gameObject.CompareTag("Player"))
         {
             Break();
         }    
