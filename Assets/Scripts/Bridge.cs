@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -29,7 +28,7 @@ public class Bridge : MonoBehaviour
             }
         }    
     }
-
+    
     public void Break()
     {
         // Вырезаем отверстие в навмеш (чтобы игрок там больше не смог пройти)
