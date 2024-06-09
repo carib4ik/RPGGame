@@ -7,7 +7,7 @@ public class PickUpPotion : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             var player = other.gameObject.GetComponent<Outline>();
-            player.OutlineWidth = 2;
+            player.OutlineWidth = 2f;
             
             Destroy(gameObject);
         }

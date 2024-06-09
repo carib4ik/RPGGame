@@ -21,7 +21,12 @@ public class Bridge : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Break();
+            var playerLighting = other.gameObject.GetComponent<Outline>();
+            
+            if (playerLighting.OutlineWidth != 2f)
+            {
+                Break();
+            }
         }    
     }
 
