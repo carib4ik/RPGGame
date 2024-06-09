@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -14,6 +15,14 @@ public class Bridge : MonoBehaviour
     {
         _navMeshObstacle = GetComponent<NavMeshObstacle>();
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<MovementController>() != null)
+        {
+            Break();
+        }    
     }
 
     public void Break()
